@@ -1,8 +1,6 @@
 /*
-بسم الله الرحمن الرحيم
-Authors: Ayah Sa'fin , 1160063
-         Rawan Alimi , 1161405
-* A simple C program to manipulate two one dimensional arrays
+Authors: Ayah Sa'fin 
+        * A simple C program to manipulate two one dimensional arrays
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -210,7 +208,7 @@ int temp,i,j;
 double temp2;
 char temp3;
 printf("Book info taken from file \n");
-FILE *in = fopen("books","r");
+FILE *in = fopen("books.txt","r");
 while((fscanf(in,"%s %d %lf",names[*size],&bins[*size],&price[*size]))!=-1){
 *size+=1;
 	};//read elements from file
@@ -250,7 +248,7 @@ void updateDataFile(char names[][NAMESIZE], int bins[], double price[], int *siz
 int i;
 printf("Book info file update \n");
 FILE * out;
-out= fopen("books","w");
+out= fopen("books.txt","w");
 for(i=0;i<*size;i++){
 fprintf(out,"%d %f %s\n",bins[i],price[i],names[i]);//print updated array in the file
 }
